@@ -1,0 +1,43 @@
+<h1> Movie Details </h1>
+<tr>
+  <img src="<%= @movie.image_url %>" width ="300">
+
+</tr>
+
+<tr>
+  <th> Movie Title  </th>
+</tr>
+<tr>
+  <td>
+    <%= @movie.title %>
+  </td>
+</tr>
+  <tr>
+      <th> Movie Year  </th>
+  </tr>
+<tr>
+  <td>
+  <%= @movie.year %>
+  </td>
+</tr>
+<tr>
+    <th> Movie Duration  </th>
+</tr>
+<tr>
+<td>
+<%= @movie.duration.to_s + " minutes" %>
+</td>
+</tr>
+<tr>
+    <th> Movie Description  </th>
+</tr>
+<tr>
+<td>
+<%= @movie.description %>
+</td>
+</tr>
+
+
+<a href="/movies">Back</a>
+<a href="/movies/<%= @movie.id %>/edit">Edit</a>
+<a href="/delete_movie/<%= @movie.id %>"> Delete </a>
